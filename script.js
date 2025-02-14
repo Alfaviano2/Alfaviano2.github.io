@@ -53,27 +53,13 @@
     }
 })();
 */
-const messages = [
-    "Are you sure?",
-    "Really sure??",
-    "Are you positive?",
-    "hemmmm",
-    "Just think about it!",
-    "ok",
-    "Ok fine, I will stop asking...",
-    "Just kidding, say yes please! ❤️"
-];
 
 let messageIndex = 0;
 
 function handleNoClick() {
-    const noButton = document.querySelector('.no-button');
-    const yesButton = document.querySelector('.yes-button');
-    noButton.textContent = messages[messageIndex];
-    messageIndex = (messageIndex + 1) % messages.length;
-    const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-    yesButton.style.fontSize = `${currentSize * 1.5}px`;
+    window.open("no_page.html", "_blank");
 }
+
 
 function handleYesClick() {
     window.location.href = "yes_page.html";
